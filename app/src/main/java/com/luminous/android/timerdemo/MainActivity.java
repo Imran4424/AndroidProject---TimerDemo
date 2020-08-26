@@ -17,8 +17,15 @@ public class MainActivity extends AppCompatActivity {
         final Handler handler = new Handler();
 
         new CountDownTimer(1000, 1000) {
+            public void onTick(long milisecondUntilDone) {
+                Log.d("seconds left", String.valueOf(milisecondUntilDone/ 1000));
+            }
 
-        };
+            @Override
+            public void onFinish() {
+                Log.d("Finished", "We are done");
+            }
+        }.start();
 
 //        Runnable run = new Runnable() {
 //            @Override
