@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
         Handler handler = new Handler();
 
 
-
         
     }
 }
