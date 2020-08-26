@@ -3,6 +3,7 @@ package com.luminous.android.timerdemo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.util.Log;
 
@@ -15,15 +16,19 @@ public class MainActivity extends AppCompatActivity {
 
         final Handler handler = new Handler();
 
-        Runnable run = new Runnable() {
-            @Override
-            public void run() {
-                Log.d("warrior", "A Second passed");
+        new CountDownTimer(1000, 1000) {
 
-                handler.postDelayed(this, 1000);
-            }
         };
 
-        handler.post(run);
+//        Runnable run = new Runnable() {
+//            @Override
+//            public void run() {
+//                Log.d("warrior", "A Second passed");
+//
+//                handler.postDelayed(this, 1000);
+//            }
+//        };
+//
+//        handler.post(run);
     }
 }
