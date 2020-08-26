@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,7 +13,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Handler handler = new Handler();
-        
+        final Handler handler = new Handler();
+
+        Runnable run = new Runnable() {
+            @Override
+            public void run() {
+                Log.d("warrior", "A Second passed");
+
+                handler.postDelayed(this, 1000);
+            }
+        };
     }
 }
