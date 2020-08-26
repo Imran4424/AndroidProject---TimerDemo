@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         final Handler handler = new Handler();
 
-        new CountDownTimer(1000, 1000) {
+        new CountDownTimer(10000, 1000) {
             public void onTick(long milisecondUntilDone) {
                 Log.d("seconds left", String.valueOf(milisecondUntilDone/ 1000));
             }
